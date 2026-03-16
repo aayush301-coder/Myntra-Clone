@@ -20,3 +20,17 @@ searchBar.style.boxShadow = "0 0 0 2px #ff3f6c33";
 searchInput.addEventListener("blur", () => {
 searchBar.style.boxShadow = "none";
 });
+
+const saleItems = document.querySelectorAll(".sale_item");
+
+saleItems.forEach(item => {
+
+item.addEventListener("mouseenter", () => {
+item.style.boxShadow = "0 6px 20px rgba(0,0,0,0.15)";
+});
+
+item.addEventListener("mouseleave", () => {
+item.style.boxShadow = "none";
+});
+
+});
