@@ -91,3 +91,16 @@ wishlistBtn.querySelector(".action_name").textContent =
 "Wishlist (" + wishlistCount + ")";
 
 });
+
+const bagBtn = document.querySelectorAll(".action_container")[2];
+
+let bagCount = 0;
+
+bagBtn.addEventListener("click", () => {
+
+bagCount++;
+
+bagBtn.querySelector(".action_name").textContent =
+"Bag (" + bagCount + ")";
+
+});
