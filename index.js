@@ -34,3 +34,14 @@ item.style.boxShadow = "none";
 });
 
 });
+
+const preloadImages = [
+"images/myntra banner1.jpg",
+"images/myntra banner2.jpeg",
+"images/myntra banner3.jpeg"
+];
+
+preloadImages.forEach(src => {
+const img = new Image();
+img.src = src;
+});
