@@ -104,3 +104,22 @@ bagBtn.querySelector(".action_name").textContent =
 "Bag (" + bagCount + ")";
 
 });
+
+const revealElements = document.querySelectorAll(".category_items");
+
+window.addEventListener("scroll", () => {
+
+const trigger = window.innerHeight * 0.85;
+
+revealElements.forEach(el => {
+
+const top = el.getBoundingClientRect().top;
+
+if(top < trigger){
+el.style.opacity = "1";
+el.style.transform = "translateY(0)";
+}
+
+});
+
+});
