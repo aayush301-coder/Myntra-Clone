@@ -78,3 +78,16 @@ bannerIndex = 0;
 }
 
 setInterval(changeBanner, 4000);
+
+const wishlistBtn = document.querySelectorAll(".action_container")[1];
+
+let wishlistCount = 0;
+
+wishlistBtn.addEventListener("click", () => {
+
+wishlistCount++;
+
+wishlistBtn.querySelector(".action_name").textContent =
+"Wishlist (" + wishlistCount + ")";
+
+});
