@@ -45,3 +45,36 @@ preloadImages.forEach(src => {
 const img = new Image();
 img.src = src;
 });
+
+
+const banner = document.querySelector(".banner_image");
+
+const banners = [
+"images/myntra banner1.jpg",
+"images/banner2.jpeg",
+"images/banner3.jpeg"
+];
+
+let bannerIndex = 0;
+
+function changeBanner(){
+
+banner.style.opacity = "0";
+
+setTimeout(() => {
+
+banner.src = banners[bannerIndex];
+
+banner.style.opacity = "1";
+
+bannerIndex++;
+
+if(bannerIndex >= banners.length){
+bannerIndex = 0;
+}
+
+}, 300);
+
+}
+
+setInterval(changeBanner, 4000);
