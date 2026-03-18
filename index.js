@@ -35,45 +35,21 @@ item.style.boxShadow = "none";
 
 });
 
-const preloadImages = [
-"images/myntra banner1.jpg",
-"images/myntra banner2.jpeg",
-"images/myntra banner3.jpeg"
-];
-
-preloadImages.forEach(src => {
-const img = new Image();
-img.src = src;
-});
-
-
-const banner = document.querySelector(".banner_image");
-
-const banners = [
-"images/myntra banner1.jpg",
-"images/banner2.jpeg",
-"images/banner3.jpeg"
-];
+const banners = document.querySelectorAll(".banner_image");
 
 let bannerIndex = 0;
 
 function changeBanner(){
 
-banner.style.opacity = "0";
+banners.forEach(img => img.classList.remove("active"));
 
-setTimeout(() => {
-
-banner.src = banners[bannerIndex];
-
-banner.style.opacity = "1";
+banners[bannerIndex].classList.add("active");
 
 bannerIndex++;
 
 if(bannerIndex >= banners.length){
 bannerIndex = 0;
 }
-
-}, 300);
 
 }
 
